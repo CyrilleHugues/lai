@@ -1,8 +1,9 @@
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
     entry: './src/entry.js',
     output: {
       path: './bin',
-      filename: "bundle.js"
     },
     module: {
         loaders: [
@@ -10,5 +11,11 @@ module.exports = {
             { test: /\.jade$/, loader: 'jade' },
             { test: /\.less$/, loader: 'style!css!less' }
         ]
-    }
+    },
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: './src/index.jade',
+        filename: 'index.html'
+      })
+    ]
 };
