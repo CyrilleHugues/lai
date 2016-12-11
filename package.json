@@ -4,8 +4,7 @@
   "description": "loopback as a front framework",
   "main": "index.js",
   "scripts": {
-    "start": "rm -r ./bin/; webpack",
-    "watch": "webpack-dev-server --progress --colors --watch --content-base bin/"
+    "start": "webpack-dev-server --progress --colors --watch --content-base bin/"
   },
   "author": "",
   "license": "ISC",
